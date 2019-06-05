@@ -2,6 +2,15 @@
 
 - Started Coding: December 2018.
 
+<b>Lessons:</b>
+
+1. <b>Creating a component:</b> <br>
+Files: component-map > user-map 
+
+2. <b>Properties & Methods:</b> <br>
+Files: user.component.ts 
+
+
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
 ## Development server

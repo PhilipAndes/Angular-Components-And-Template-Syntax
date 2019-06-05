@@ -46,6 +46,10 @@ users.component.ts, users.component.html
 Files: app-map > components-map > users-map<br>
 users.component.ts, users.component.html, users.component.css, User.ts
 
+11. <b>Style Binding & ngStyle</b> <br>
+Files: app-map > components-map > users-map<br>
+users.component.ts, users.component.html
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

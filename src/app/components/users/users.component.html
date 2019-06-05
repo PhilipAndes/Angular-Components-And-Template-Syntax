@@ -10,7 +10,8 @@
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0">
   <!-- ngfor: Here we say for every users we want a variable user -->
   <!-- Class-binding; here we say; if the user has the class isActive we set the bg to light -->
-  <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-dark]="user.isActive">
+  <!-- Style-binding; here we say; if user isActive is false we add a green border -->
+  <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-success]="user.isActive" [style.border-color]="!user.isActive ? 'green' : ''">
     <div class="row">
       <div class="col-sm-4">
 
@@ -25,7 +26,8 @@
 
       </div>
       <div class="col-sm-8">
-        <h3 [class.text-white]="user.isActive">{{ user.firstName }} {{ user.lastName }}</h3>
+        <!-- Here we add class-binding and style binding again -->
+        <h3 [class.text-white]="user.isActive" [ngStyle]="currentStyles">{{ user.firstName }} {{ user.lastName }}</h3>
         <ul class="list-group" *ngIf="showExtended && user.age && user.address">
           <li class="list-group-item">Age: {{ user.age }}</li>
           <li class="list-group-item">Address: {{ user.address.street }} {{ user.address.city }},

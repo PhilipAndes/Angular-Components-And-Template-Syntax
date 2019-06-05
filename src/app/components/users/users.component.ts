@@ -23,6 +23,8 @@ export class UsersComponent implements OnInit {
 
   currentClasses = {};
 
+  currentStyles = {};
+
   constructor() { }
 
   ngOnInit() {
@@ -112,6 +114,8 @@ export class UsersComponent implements OnInit {
     // });
 
     this.setCurrentClasses();
+
+    this.setCurrentStyles();
   }
 
   addUser(user: User) {
@@ -124,6 +128,14 @@ export class UsersComponent implements OnInit {
       'btn-success': this.enableAdd,
       // We can add more classes if we want
       'big-text': this.showExtended
+    }
+  }
+
+  // Set showExtended to false to see differance
+  setCurrentStyles() {
+    this.currentStyles = {
+      'padding-top': this.showExtended ? '0' : '40px',
+      'font-size': this.showExtended ? '' : '40px'
     }
   }
 

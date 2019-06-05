@@ -36,6 +36,8 @@ users.component.ts, users.component.html, app.component.html(<app-users>)
 8. <b>Conditionals With ngIf</b> <br>
 Files: users.component.ts, users.component.html, app.component.html(<app-users>)
 
+9. <b>Bootstrap 4 Added</b> <br>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

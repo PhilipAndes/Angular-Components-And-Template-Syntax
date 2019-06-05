@@ -20,6 +20,10 @@ Files: user.component.html
 4. <b>Using Types:</b> <br>
 Files: user.component.ts 
 
+5. <b>Cleanup & Interfaces:</b> <br>
+Files: app-map > models-map > User.ts <br>
+user.component.ts, user.component.html
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

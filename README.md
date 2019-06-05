@@ -2,7 +2,11 @@
 
 - Started Coding: December 2018.
 
-<b>Lessons:</b>
+
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+
+<b>Lessons:</b><br>
+- Notice: uncomment the right part for each lesson!
 
 1. <b>Creating a component:</b> <br>
 Files: component-map > user-map 
@@ -13,8 +17,8 @@ Files: user.component.ts
 3. <b>String Interpolation:</b> <br>
 Files: user.component.html 
 
-
-- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+4. <b>Using Types:</b> <br>
+Files: user.component.ts 
 
 ## Development server
 

@@ -21,6 +21,8 @@ export class UsersComponent implements OnInit {
 
   enableAdd: boolean = true;
 
+  currentClasses = {};
+
   constructor() { }
 
   ngOnInit() {
@@ -67,13 +69,14 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Tim',
         lastName: 'Smith',
-        age: 30,
+        age: 70,
         address: {
           street: '50 Main st',
           city: 'Boston',
           state: 'MA'
         },
-        image: 'http://lorempixel.com/600/600/people/3'
+        image: 'http://lorempixel.com/600/600/people/3',
+        isActive: true
       },
       {
         firstName: 'John',
@@ -84,7 +87,8 @@ export class UsersComponent implements OnInit {
           city: 'Lynn',
           state: 'MA'
         },
-        image: 'http://lorempixel.com/600/600/people/2'
+        image: 'http://lorempixel.com/600/600/people/2',
+        isActive: false
       },
       {
         firstName: 'Karen',
@@ -95,7 +99,8 @@ export class UsersComponent implements OnInit {
           city: 'Miami',
           state: 'FL'
         },
-        image: 'http://lorempixel.com/600/600/people/1'
+        image: 'http://lorempixel.com/600/600/people/1',
+        isActive: true
       }
     ];
 
@@ -105,10 +110,21 @@ export class UsersComponent implements OnInit {
     //   firstName: 'David',
     //   lastName: 'Jackson'
     // });
+
+    this.setCurrentClasses();
   }
 
   addUser(user: User) {
     this.users.push(user);
+  }
+
+  setCurrentClasses() {
+    this.currentClasses = {
+      // Add btn-succes class if this property is true
+      'btn-success': this.enableAdd,
+      // We can add more classes if we want
+      'big-text': this.showExtended
+    }
   }
 
 }

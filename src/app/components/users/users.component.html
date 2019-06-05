@@ -3,13 +3,32 @@
 <!--  So we will need to loop through -->
 
 <h2>Users</h2>
-<ul>
+<!-- If the lenght of users in the array is greater then 0 -->
+<!-- Lets say we also get users from a http request we have added a loaded function to the users.components.ts and call it here; if loaded AND etc -->
+<!-- We add a question mark here for the timeout function we created, it means its ok if they dont excist -->
+<ul *ngIf="loaded && users?.length > 0">
   <!-- Here we say for every users we want a variable user -->
   <li *ngFor="let user of users">
-      <h3>{{ user.firstName }} {{ user.lastName }}</h3>
-      <ul>
-        <li>Age: {{ user.age }}</li>
-        <li>Address: {{ user.address.street }} {{ user.address.city }} {{ user.address.state }}</li>
-      </ul>
+    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+    <ul *ngIf="showExtended && user.age && user.address">
+      <li>Age: {{ user.age }}</li>
+      <li>Address: {{ user.address.street }} {{ user.address.city }} {{ user.address.state }}</li>
+    </ul>
   </li>
 </ul>
+
+<!-- You can do it this way -->
+<!-- But for this way we have to use: <ul *ngIf="users.length > 0; else noUsers"> -->
+<!-- <ng-template #noUsers>
+  <h4>No Users Found</h4>
+</ng-template> -->
+
+
+<!-- Or just this way -->
+<h4 *ngIf="users?.length == 0">No Users Found</h4>
+
+<!-- Here you can have some animation like a spinner thats loading instead of the text -->
+<h4 *ngIf="!loaded">Loading Users...</h4>
+
+
+

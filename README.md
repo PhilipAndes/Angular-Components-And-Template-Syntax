@@ -33,6 +33,9 @@ app.component.html(<app-users>), users.component.ts, users.component.html, user.
 Files: app-map > components-map > users-map<br>
 users.component.ts, users.component.html, app.component.html(<app-users>)
 
+8. <b>Conditionals With ngIf</b> <br>
+Files: users.component.ts, users.component.html, app.component.html(<app-users>)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

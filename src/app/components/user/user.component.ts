@@ -14,5 +14,25 @@ import { Component } from '@angular/core';
 })
 
 export class UserComponent {
+  // Define properties inside the class here:
+  firstName = 'Philip';
+  lastName = 'Andes';
+  age = 30;
 
+  // We can also define methods:
+  constructor() {
+    this.sayHello(); // Hello Philip
+    console.log(this.age); // 30
+    this.hasBirthday();
+    console.log(this.age); // 31
+  }
+
+  // Or our own methods:
+  sayHello() {
+    console.log(`Hello ${this.firstName}`);
+  }
+
+  hasBirthday() {
+    this.age += 1;
+  }
 }

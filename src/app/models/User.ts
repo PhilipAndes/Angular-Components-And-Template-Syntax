@@ -9,6 +9,9 @@ export interface User {
   },
   image?: string,
   // Is active as for example a user that hasn't been active for 30days or is active for 30days etc
-  isActive?: boolean
+  isActive?: boolean,
+  
+  balance?: number,
+  registered?: any
 }
 

@@ -11,7 +11,8 @@
   <!-- ngfor: Here we say for every users we want a variable user -->
   <!-- Class-binding; here we say; if the user has the class isActive we set the bg to light -->
   <!-- Style-binding; here we say; if user isActive is false we add a green border -->
-  <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-success]="user.isActive" [style.border-color]="!user.isActive ? 'green' : ''">
+  <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-success]="user.isActive"
+    [style.border-color]="!user.isActive ? 'green' : ''">
     <div class="row">
       <div class="col-sm-4">
 
@@ -27,11 +28,49 @@
       </div>
       <div class="col-sm-8">
         <!-- Here we add class-binding and style binding again -->
-        <h3 [class.text-white]="user.isActive" [ngStyle]="currentStyles">{{ user.firstName }} {{ user.lastName }}</h3>
+        <!-- <h3 [class.text-white]="user.isActive" [ngStyle]="currentStyles">{{ user.firstName }} {{ user.lastName }}</h3> -->
+
+        <!-- Lets use pipes for example set the firstname to uppercase and the lastname to lowercase -->
+        <h3 [class.text-white]="user.isActive" [ngStyle]="currentStyles">{{ user.firstName | uppercase }}
+          {{ user.lastName | lowercase }}</h3>
+
         <ul class="list-group" *ngIf="showExtended && user.age && user.address">
           <li class="list-group-item">Age: {{ user.age }}</li>
           <li class="list-group-item">Address: {{ user.address.street }} {{ user.address.city }},
             {{ user.address.state }}</li>
+          <!-- We want to format this to currency so we can do that with a pipe -->
+          <!-- We can also add percent: <li class="list-group-item">Balance: {{ user.balance | currency:"EUR" }} until {{ 1 | percent }}</li> -->
+          <li class="list-group-item">Balance: {{ user.balance | currency:"EUR" }}</li>
+          <!-- Or you can use: <li class="list-group-item">Balance: {{ user.balance | currency:"EUR":"code" }}</li> for the actual code -->
+
+          <!-- Lets do date with the pipe -->
+          <li class="list-group-item">Joined: {{ user.registered | date }}</li>
+
+          <!-- You can format this in many different ways -->
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"mm/dd/yyyy" }}</li> -->
+
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"yyyy" }}</li> -->
+
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"shortDate" }}</li> -->
+
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"longDate" }}</li> -->
+
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"fullDate" }}</li> -->
+
+          <!-- Or deal with the time -->
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"shortTime" }}</li> -->
+
+          <!-- <li class="list-group-item">Joined: {{ user.registered | date:"longTime" }}</li> -->
+
+
+          <!-- we also have  a number pipe where we can put decimals: -->
+          <!-- so 1 number on te left and 2 on the right of the decimal -->
+          <!-- <li class="list-group-item">{{ 5 | number:"1.2" }}</li> -->
+
+
+          <!-- ngNonBindable; which will actualy show the code, which is handy if for example you making a blog post, and you want to add some code as output-->
+          <!-- add <pre> to it -->
+          <li class="list-group-item" ngNonBindable><pre>{{ 5 | number:"1.2" }}</pre></li>
         </ul>
       </div>
     </div>

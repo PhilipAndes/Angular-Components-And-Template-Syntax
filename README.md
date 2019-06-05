@@ -5,7 +5,8 @@
 
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
-<b>Lessons:</b><br>
+## Lessons:
+
 - Notice: uncomment the right part for each lesson!
 
 1. <b>Creating a component:</b> <br>
@@ -46,8 +47,13 @@ users.component.ts, users.component.html
 Files: app-map > components-map > users-map<br>
 users.component.ts, users.component.html, users.component.css, User.ts
 
-11. <b>Style Binding & ngStyle</b> <br>
+12. <b>Style Binding & ngStyle</b> <br>
 Files: app-map > components-map > users-map<br>
+users.component.ts, users.component.html
+
+13. <b>Pipes & ngNonBindable</b> <br>
+Files: User.ts<br>
+app-map > components-map > users-map<br>
 users.component.ts, users.component.html
 
 ## Development server

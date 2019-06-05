@@ -19,20 +19,27 @@ export class UserComponent {
   lastName = 'Andes';
   age = 30;
 
+  // Lets add an object:
+  address = {
+    street: '50 Main st',
+    city: 'Boston',
+    state: 'MA'
+  };
+
   // We can also define methods:
   constructor() {
-    this.sayHello(); // Hello Philip
-    console.log(this.age); // 30
-    this.hasBirthday();
-    console.log(this.age); // 31
+    // this.sayHello(); // Hello Philip
+    // console.log(this.age); // 30
+    // this.hasBirthday();
+    // console.log(this.age); // 31
   }
 
   // Or our own methods:
-  sayHello() {
-    console.log(`Hello ${this.firstName}`);
-  }
+  // sayHello() {
+  //   console.log(`Hello ${this.firstName}`);
+  // }
 
-  hasBirthday() {
-    this.age += 1;
-  }
+  // hasBirthday() {
+  //   this.age += 1;
+  // }
 }

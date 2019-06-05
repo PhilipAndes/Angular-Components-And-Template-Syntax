@@ -1,1 +1,14 @@
-<h2>Philip Andes</h2>
+<!-- We can use string interpolation like: -->
+<h2>{{ 'Philip Andes' }} </h2>
+<!-- Or -->
+{{ 5 + 5 }} 
+
+<!-- Or we can use properties here that we defined  -->
+<h2>{{ firstName }} {{ lastName }}</h2> 
+<!-- Philip Andes -->
+
+<ul>
+  <li>Age: {{ age }}</li>
+  <!-- Or use a object -->
+  <li>Address: {{ address.street }} {{ address.city }} {{ address.state }}</li>
+</ul>

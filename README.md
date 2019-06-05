@@ -10,6 +10,9 @@ Files: component-map > user-map
 2. <b>Properties & Methods:</b> <br>
 Files: user.component.ts 
 
+3. <b>String Interpolation:</b> <br>
+Files: user.component.html 
+
 
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 

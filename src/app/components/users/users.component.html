@@ -3,17 +3,36 @@
 <!--  So we will need to loop through -->
 
 <h2>Users</h2>
-<!-- If the lenght of users in the array is greater then 0 -->
+<button [disabled]="!enableAdd" class="btn btn-light btn-block mb-3">Add New User</button>
+<!-- If the length of users in the array is greater then 0 -->
 <!-- Lets say we also get users from a http request we have added a loaded function to the users.components.ts and call it here; if loaded AND etc -->
 <!-- We add a question mark here for the timeout function we created, it means its ok if they dont excist -->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0">
   <!-- Here we say for every users we want a variable user -->
   <li class="card card-body mb-2" *ngFor="let user of users">
-    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
-    <ul class="list-group" *ngIf="showExtended && user.age && user.address">
-      <li class="list-group-item">Age: {{ user.age }}</li>
-      <li class="list-group-item">Address: {{ user.address.street }} {{ user.address.city }} {{ user.address.state }}</li>
-    </ul>
+    <div class="row">
+      <div class="col-sm-4">
+
+        <!-- Best way to bind properties: -->
+        <img *ngIf="user.image" class="img-fluid" [src]="user.image" alt="">
+
+        <!-- Another way to bind properties is -->
+        <!-- <img *ngIf="user.image" class="img-fluid" src="{{user.image}}" alt=""> -->
+
+        <!-- Another way to bind properties is -->
+        <!-- <img *ngIf="user.image" class="img-fluid" bind-src="user.image" alt=""> -->
+
+      </div>
+      <div class="col-sm-8">
+        <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+        <ul class="list-group" *ngIf="showExtended && user.age && user.address">
+          <li class="list-group-item">Age: {{ user.age }}</li>
+          <li class="list-group-item">Address: {{ user.address.street }} {{ user.address.city }},
+            {{ user.address.state }}</li>
+        </ul>
+      </div>
+    </div>
+
   </li>
 </ul>
 
@@ -29,6 +48,3 @@
 
 <!-- Here you can have some animation like a spinner thats loading instead of the text -->
 <h4 *ngIf="!loaded">Loading Users...</h4>
-
-
-

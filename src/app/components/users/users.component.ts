@@ -19,6 +19,8 @@ export class UsersComponent implements OnInit {
   // Change to false to see Loading Users message 
   loaded: boolean = false;
 
+  enableAdd: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -63,14 +65,15 @@ export class UsersComponent implements OnInit {
     // Array of user objects:
     this.users = [
       {
-        firstName: 'Philip',
-        lastName: 'Andes',
+        firstName: 'Tim',
+        lastName: 'Smith',
         age: 30,
         address: {
           street: '50 Main st',
           city: 'Boston',
           state: 'MA'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/3'
       },
       {
         firstName: 'John',
@@ -80,7 +83,8 @@ export class UsersComponent implements OnInit {
           street: '20 School st',
           city: 'Lynn',
           state: 'MA'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/2'
       },
       {
         firstName: 'Karen',
@@ -90,16 +94,17 @@ export class UsersComponent implements OnInit {
           street: '55 Mill st',
           city: 'Miami',
           state: 'FL'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/1'
       }
     ];
 
     this.loaded = true;
 
-    this.addUser({
-      firstName: 'David',
-      lastName: 'Jackson'
-    });
+    // this.addUser({
+    //   firstName: 'David',
+    //   lastName: 'Jackson'
+    // });
   }
 
   addUser(user: User) {

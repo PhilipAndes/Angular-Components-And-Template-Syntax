@@ -36,7 +36,11 @@ users.component.ts, users.component.html, app.component.html(<app-users>)
 8. <b>Conditionals With ngIf</b> <br>
 Files: users.component.ts, users.component.html, app.component.html(<app-users>)
 
-9. <b>Bootstrap 4 Added</b> <br>
+9. <b>Bootstrap 4 Added (navbar + styling)</b> <br>
+
+10. <b>Property Binding (Added image)</b> <br>
+Files: app-map > components-map > users-map<br>
+users.component.ts, users.component.html
 
 ## Development server
 

@@ -9,20 +9,25 @@
 - Notice: uncomment the right part for each lesson!
 
 1. <b>Creating a component:</b> <br>
-Files: component-map > user-map 
+Files: component-map > user-map <br>
+app.component.html(<app-user>)
 
 2. <b>Properties & Methods:</b> <br>
-Files: user.component.ts 
+Files: app.component.html(<app-user>), user.component.ts 
 
 3. <b>String Interpolation:</b> <br>
-Files: user.component.html 
+Files: app.component.html(<app-user>), user.component.html 
 
 4. <b>Using Types:</b> <br>
-Files: user.component.ts 
+Files: app.component.html(<app-user>), user.component.ts 
 
 5. <b>Cleanup & Interfaces:</b> <br>
 Files: app-map > models-map > User.ts <br>
-user.component.ts, user.component.html
+app.component.html(<app-user>), user.component.ts, user.component.html
+
+6. <b>Generating Components & OnInit:</b> <br>
+Files: app-map > components-map > users-map<br>
+app.component.html(<app-users>), users.component.ts, users.component.html, user.component.ts
 
 ## Development server
 

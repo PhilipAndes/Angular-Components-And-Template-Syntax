@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../models/User';
 
@@ -15,7 +15,7 @@ import { User } from '../../models/User';
   // `]
 })
 
-export class UserComponent {
+export class UserComponent implements OnInit {
   /////////////////////////Properties & Methods//////////////////////////
   // Define properties inside the class here:
   // firstName = 'Philip';
@@ -87,23 +87,23 @@ export class UserComponent {
 
   /////////////////////////Cleanup Interfaces////////////////////////////
 
-  // Property
-  user: User;
+//   // Property
+//   user: User;
 
-  // Methods
-  constructor() {
-    this.user = {
-      firstName: 'Philip',
-      lastName: 'Andes',
-      age: 30,
-      address: {
-        street: '50 Main st',
-        city: 'Boston',
-        state: 'MA'
-      }
-    }
-  }
-}
+//   // Methods
+//   constructor() {
+//     this.user = {
+//       firstName: 'Philip',
+//       lastName: 'Andes',
+//       age: 30,
+//       address: {
+//         street: '50 Main st',
+//         city: 'Boston',
+//         state: 'MA'
+//       }
+//     }
+//   }
+// }
 
 // So if we would use this in other files, we would create a new folder called models in the app folder, and any interfaces or model classes we put in there
 
@@ -119,3 +119,26 @@ export class UserComponent {
 // }
 
 // Notice that we also have to bring the new created file in here on top: import { User } from '../../models/User';
+
+
+///////////////////////// ngOnInit //////////////////////////////////
+  // Property
+  user: User;
+
+  // Methods
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.user = {
+      firstName: 'Philip',
+      lastName: 'Andes',
+      age: 30,
+      address: {
+        street: '50 Main st',
+        city: 'Boston',
+        state: 'MA'
+      }
+    }
+  }
+}

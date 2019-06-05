@@ -29,6 +29,10 @@ app.component.html(<app-user>), user.component.ts, user.component.html
 Files: app-map > components-map > users-map<br>
 app.component.html(<app-users>), users.component.ts, users.component.html, user.component.ts
 
+7. <b>Loops with NgFor</b> <br>
+Files: app-map > components-map > users-map<br>
+users.component.ts, users.component.html, app.component.html(<app-users>)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
